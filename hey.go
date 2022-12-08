@@ -215,7 +215,7 @@ func main() {
 
 	// set userAgent header if set
 	if *userAgent != "" {
-		ua = *userAgent + " " + heyUA
+		ua = *userAgent
 		header.Set("User-Agent", ua)
 	}
 
