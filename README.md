@@ -1,6 +1,11 @@
+# Fork of https://github.com/rakyll/hey
+
+Description from the original github:
+
+
+
 ![hey](http://i.imgur.com/szzD9q0.png)
 
-[![Build Status](https://travis-ci.org/rakyll/hey.svg?branch=master)](https://travis-ci.org/rakyll/hey)
 
 hey is a tiny program that sends some load to a web application.
 
@@ -11,14 +16,25 @@ To preserve the name for its original owner, we renamed this project to hey.
 
 ## Installation
 
-* Linux 64-bit: https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64
-* Mac 64-bit: https://hey-release.s3.us-east-2.amazonaws.com/hey_darwin_amd64
-* Windows 64-bit: https://hey-release.s3.us-east-2.amazonaws.com/hey_windows_amd64
+Set up GOPATH if not yet done
+```
+export GOPATH=$HOME/gocode
+export PATH=$PATH:$GOPATH/bin
+```
+
+Use `go get` to download and install this package
+```
+go get github.com/lindsey-em/hey
+```
+
+Finally, run the tool using the following syntax
+```
+hey [options...] <url>
+```
 
 ### Package Managers
 
-macOS:
--  [Homebrew](https://brew.sh/) users can use `brew install hey`.
+This fork was created to allow the user agent header to be changed - currently the Brew package manager doesn't have this functionality so it is recommended you follow the instructions above
 
 ## Usage
 
@@ -49,6 +65,7 @@ Options:
   -d  HTTP request body.
   -D  HTTP request body from file. For example, /home/user/file.txt or ./file.txt.
   -T  Content-type, defaults to "text/html".
+  -U  User-Agent, defaults to version "hey/0.0.1".
   -a  Basic authentication, username:password.
   -x  HTTP Proxy address as host:port.
   -h2 Enable HTTP/2.
