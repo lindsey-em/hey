@@ -14,6 +14,10 @@ tool at [tarekziade/boom](https://github.com/tarekziade/boom). Using the same na
 where binary name conflicts created confusion.
 To preserve the name for its original owner, we renamed this project to hey.
 
+---
+
+# Installation and usage
+
 ## Installation
 
 Set up GOPATH if not yet done
